@@ -6,10 +6,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-//Funciones que responden a los metodos get post put delete
-app.get('/', function(reg, res){
-    res.send('Hello World');
-})
+require('./api/router.js').default(app);
 app.listen(3500,function(){
     console.log('el servidor esta corriendo en el puerto 3500');
 });
