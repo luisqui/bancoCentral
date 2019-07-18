@@ -17,5 +17,5 @@ module.exports = (app) => {
             'laEdad': edad
         };
         res.send(miPersona);
-    })
+    });
 }
